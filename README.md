@@ -11,6 +11,10 @@ The SBOM, or Software Bill of Materials, is simply a list of components that mak
 
 An app dedicated to maintaining security protocols and guidelines
 
+# Scorecard
+
+An app built to show certain levels or "grades" regarding upholding good security practices within components
+
 # Synk CLI
 
 The CLI scans for potential vulnerabilities in the code
