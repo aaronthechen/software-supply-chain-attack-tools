@@ -7,39 +7,42 @@
 </head>
 
 <script type="module">
+  // Imports WebAssembly wrapper provided by Rust
   import init, { Request } from "/pkg/software_supply_chain_attack_tools.js";
-  
-  let allowed = false;
-  
+    
   init()
     .then(() => {
       let request = Request.new();
       window.request = request;
     });
   
+  // Attempts get request from Rust
   function get() {
     if(!request.try_get()) {
       document.getElementById("result").innerHTML="Unable to retrieve data."
     }
   }
 
+  let allowed = false;
+  // Changes permissions for Rust
   function change() {
     allowed = !allowed;
     request.allow()
     if(allowed) {
-      document.getElementById('allow').innerHTML='Remove Access for Rust sandbox'
+      document.getElementById('allow').innerHTML='Remove Access'
     }
     else {
-      document.getElementById('allow').innerHTML='Allow Request for Rust sandbox'
+      document.getElementById('allow').innerHTML='Allow Request'
     }
   }
+  
   window.get = get
   window.change = change
 </script>
 
 <body>
   <button onclick="get()">Get Request from Rust</button>
-  <button id="allow" onclick="change()">Allow Request for Rust sandbox</button>
+  <button id="allow" onclick="change()">Allow Request</button>
   <p id="result">Nothing Retrieved</p>
 </body>
 </html>
