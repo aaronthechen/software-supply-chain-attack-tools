@@ -1,10 +1,6 @@
 # Software Supply Chain Attack Tools
+
 A collection of various software supply chain security tools
-
-Some of the tools within this repo include:
-
-# Software Supply Chain Attack Tools
-A collection of various software supply chain security tools.
 
 Before running, ensure you have Rust and wasm-pack installed.
 
