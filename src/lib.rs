@@ -1,19 +1,19 @@
 use wasm_bindgen::prelude::*;
 
-// Import from parent JavaScript
+// Import from parent JavaScript module
 #[wasm_bindgen(module = "/script.js")]
 extern {
     // Get request implemented by JavaScript code
     pub fn get(); 
 }
 
-// Export from Rust
+// Export to WebAssembly
 #[wasm_bindgen]
 pub struct Request {
     allow: bool,
 }
 
-//Export from Rust
+//Export to WebAssembly
 #[wasm_bindgen]
 impl Request {
     pub fn new() -> Request {
@@ -23,10 +23,12 @@ impl Request {
             allow 
         }
     }
+
     // The user has the ability to provide permission
     pub fn allow(&mut self) {
         self.allow = !self.allow;
     }
+    
     // Attempts to call parent get function
     pub fn try_get(&self) -> bool {
         if self.allow {
