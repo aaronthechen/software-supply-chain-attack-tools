@@ -1,20 +1,23 @@
 use wasm_bindgen::prelude::*;
 
+// Import from parent JavaScript
 #[wasm_bindgen(module = "/script.js")]
 extern {
     // Get request implemented by JavaScript code
     pub fn get(); 
 }
 
+// Export from Rust
 #[wasm_bindgen]
 pub struct Request {
     allow: bool,
 }
 
+//Export from Rust
 #[wasm_bindgen]
 impl Request {
-    // Permissions are originally set to false
     pub fn new() -> Request {
+        // Permissions are originally set to false
         let allow = false;
         Request { 
             allow 
