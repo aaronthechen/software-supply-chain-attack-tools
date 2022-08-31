@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bom serialNumber="urn:uuid:213f81e2-85bb-4e2c-ad0d-bc1c4c9b46b1" version="1" xmlns="http://cyclonedx.org/schema/bom/1.3">
+  <metadata>
+    <timestamp>2022-08-31T15:12:44.9482297Z</timestamp>
+    <component type="library">
+      <name>software-supply-chain-attack-tools</name>
+      <version>0.1.0</version>
+      <purl>pkg:cargo/software-supply-chain-attack-tools@0.1.0</purl></component></metadata>
+  <components>
+    <component type="library">
+      <name>wasm-bindgen</name>
+      <version>0.2.82</version>
+      <description><![CDATA[Easy support for interacting between JS and Rust.]]></description>
+      <purl>pkg:cargo/wasm-bindgen@0.2.82</purl>
+      <scope>required</scope>
+      <licenses>
+        <license>
+          <expression>MIT/Apache-2.0</expression></license></licenses>
+      <externalReferences>
+        <reference type="documentation">
+          <url>https://docs.rs/wasm-bindgen</url></reference>
+        <reference type="website">
+          <url>https://rustwasm.github.io/</url></reference>
+        <reference type="vcs">
+          <url>https://github.com/rustwasm/wasm-bindgen</url></reference></externalReferences></component></components></bom>
